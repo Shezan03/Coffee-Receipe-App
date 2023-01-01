@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.1/purify.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row m-4 text-center">
+                <h1 class="text-primary display-4 fw-normal">Coffee Brew Receipes</h1>
+                <p class="fs-5 text-muted">Add custom brew receipes for your home below.</p>
+            </div>
+        </div>
+   
+        <div class="container">
+            <form id="receipe-form" class="p-4 m-4 row shadow-sm rounded-3 border border-2 border-primary">
+                <div class="form-group col-md-4 my-2">
+                    <label for="name">Name of Receipe</label>
+                    <input type="text" required autocomplete="off" id="name" class="form-control" placeholder="e.g., Morning Brew">
+                </div>
+                <div class="form-group col-md-4 my-2">
+                    <label for="method">Brew Method</label>
+                    <input type="text" required autocomplete="off" id="method" class="form-control" placeholder="e.g., v60  Pour Over">
+                </div>
+                <div class="form-group col-md-4 my-2">
+                    <label for="roast">Roast</label>
+                    <input type="text" required autocomplete="off" id="roast" class="form-control" placeholder="e.g., Full City">
+                </div>
+                <div class="form-group col-md-4 my-2">
+                    <label for="grind">Grind Size</label>
+                    <input type="text" required autocomplete="off" id="grind" class="form-control" placeholder="e.g., 30">
+                </div>
+                <div class="form-group col-md-4 my-2">
+                    <label for="ratio">Ratio</label>
+                    <input type="text" required autocomplete="off" id="ratio" class="form-control" placeholder="e.g., 1:16">
+                </div>
+                <div class="form-group col-md-4 my-2">
+                    <label for="note">Note(Optional)</label>
+                    <input type="text"  autocomplete="off" id="note" class="form-control">
+                </div>
+                <div class="from-group mt-4 position-relative">
+                    <input type="submit" value="Add Receipe" class="btn btn-primary position-absolute top-100 start-50 translate-middle">
+                </div>
+            </form>
+    
+            <div class="container">
+                <div class="row m-4 border-bottom border-3 border-primary">
+                    <p class="h3 text-primary">Saved Receipes</p>                   
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 mx-4 my-6 text-center" id="receipe-container"></div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script defer src= "./app.js"></script>
+   
+</body>
+</html>
